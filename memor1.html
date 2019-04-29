@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>Memorama en JS</title>
+ <link rel="stylesheet" type="text/css" href="est2.css">
+</head>
+
+<!-- Sonido -->
+<iframe src="horse.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+<audio id="player" autoplay loop>
+  <source src="horse.mp3" type="audio/mp3">
+</audio>
+<!-- Sonido -->
+
+
+<!-- Juego -->
+<section class="game-board">
+
+  <div class="memory-card" data-framework="sonic">
+    <img class="front" src="img/1.png" alt="Sonic the Hedgehog">
+    <img class="back" src="img/inte.png" >
+  </div>
+
+  <div class="memory-card" data-framework="sonic">
+    <img class="front" src="img/1.png" alt="Sonic the Hedgehog">
+    <img class="back" src="img/inte.png" >
+  </div>
+
+  <div class="memory-card" data-framework="mario">
+    <img class="front" src="img/2.png" alt="Sonic the Hedgehog">
+    <img class="back" src="img/inte.png" >
+  </div>
+
+  <div class="memory-card" data-framework="mario">
+    <img class="front" src="img/2.png" alt="Sonic the Hedgehog">
+    <img class="back" src="img/inte.png" >
+  </div>
+
+  <div class="memory-card" data-framework="finn">
+    <img class="front" src="img/3.png" alt="Finn the Human">
+    <img class="back" src="img/inte.png" >
+  </div>
+
+  <div class="memory-card" data-framework="finn">
+    <img class="front" src="img/3.png" alt="Finn the Human">
+    <img class="back" src="img/inte.png" >
+  </div>
+
+  <div class="memory-card" data-framework="jake">
+    <img class="front" src="img/4.png" alt="Jake the Dog">
+    <img class="back" src="img/inte.png" >
+  </div>
+
+  <div class="memory-card" data-framework="jake">
+    <img class="front" src="img/4.png" alt="Jake the Dog">
+    <img class="back" src="img/inte.png" >
+  </div>
+
+  <div class="memory-card" data-framework="iceKing">
+    <img class="front" src="img/5.png" alt="Ice King">
+    <img class="back" src="img/inte.png" >
+  </div>
+
+  <div class="memory-card" data-framework="iceKing">
+    <img class="front" src="img/5.png" alt="Ice King">
+    <img class="back" src="img/inte.png" >
+  </div>
+
+  <div class="memory-card" data-framework="bubblegum">
+    <img class="front" src="img/6.png" alt="Princess Bubblegum">
+    <img class="back" src="img/inte.png" >
+  </div>
+
+  <div class="memory-card" data-framework="bubblegum">
+    <img class="front" src="img/6.png" alt="Princess Bubblegum">
+    <img class="back" src="img/inte.png" >
+  </div>
+
+  <div class="memory-card" data-framework="lsp">
+    <img class="front" src="img/7.png" alt="Lumpy Space Princess">
+    <img class="back" src="img/inte.png" >
+  </div>
+
+  <div class="memory-card" data-framework="lsp">
+    <img class="front" src="img/7.png" alt="Lumpy Space Princess">
+    <img class="back" src="img/inte.png" >
+  </div>
+
+  <div class="memory-card" data-framework="rafael">
+    <img class="front" src="img/8.png" alt="Rafael">
+    <img class="back" src="img/inte.png" >
+  </div>
+
+  <div class="memory-card" data-framework="rafael">
+    <img class="front" src="img/8.png" alt="Rafael">
+    <img class="back" src="img/inte.png" >
+  </div>
+
+  <div class="memory-card" data-framework="rick">
+    <img class="front" src="img/9.png" alt="Rick Sanchez">
+    <img class="back" src="img/inte.png" >
+  </div>
+
+  <div class="memory-card" data-framework="rick">
+    <img class="front" src="img/9.png" alt="Rick Sanchez">
+    <img class="back" src="img/inte.png" >
+  </div>
+
+  <div class="memory-card" data-framework="morty">
+    <img class="front" src="img/10.png" alt="Morty Smith">
+    <img class="back" src="img/inte.png" >
+  </div>
+
+  <div class="memory-card" data-framework="morty">
+    <img class="front" src="img/10.png" alt="Morty Smith">
+    <img class="back" src="img/inte.png" >
+  </div>
+</section>
+<!-- Juego -->
+
+<!--ASIDE-->
+<aside class="game-info">
+  <div>
+    <button class="new-game" name="new-game-btn">Juego Nuevo</button>
+    <button class="reset-game btn-hide" name="reset-game-btn">Reiniciar</button>
+  </div>
+  <div id="divContador">
+    <p>Puntos</p>
+  </div>
+   <br>
+    <br>
+     <br>
+  <div id="reset">
+    <p>Tiempo</p>
+    <br>
+  <center>  <p class="timer"></p> </center>
+  </div>
+  <br>
+</aside>
+<!--ASIDE-->
+
+<section>
+  <div class="overlay hide"></div>
+  <div class="go-card hide">
+    <div class="cardText">
+    </div>
+    <button class="new-game" name="new-game-btn">Juego Nuevo</button>
+  </div>
+  <script src="ima4.js">includeHTML();</script>
+</section>
+
+
+           <footer id="footer">
+             <p>Cesar Emmanuel Medina. Erick Enriquez Posadas. Leopoldo Díaz. 2019</p>
+           </footer>

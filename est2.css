@@ -1,0 +1,276 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family:'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+
+}
+
+body{
+  background-image: url('tender.gif');
+  background-repeat: repeat;
+  background-position: center;
+  background-attachment: fixed;
+  font-size: 16px;
+  display: flex;
+}
+
+aside {
+  width: 10%;
+  float: right;
+  background:orange;
+  height: 350px;
+  border-radius: 15px;
+  padding: 24px;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.8);
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  transform: translate(-15%, 25%);
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+.game-info {
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.8);
+}
+
+button.new-game{
+  color: #ecf0f1;
+  background-color: #5882FA;
+  border: none;
+  height: 40px;
+  width: 89px;
+  align-content: center;
+  -webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 7px;
+}
+
+.game-info button.new-game{
+  margin-left: 0px;
+  margin-top: 0px;
+}
+
+button.new-game:hover{
+  color: #ecf0f1;
+  background-color: #0bba1c;
+  cursor: pointer;
+}
+
+button.new-game:active{
+  color: #ecf0f1;
+  background-color: #E3B60F;
+}
+
+.game-info button.reset-game{
+  color: #ecf0f1;
+  background-color: #5882FA;
+  border: none;
+  height: 40px;
+  width: 89px;
+  align-content: center;
+  -webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 7px;
+}
+
+.game-info button.reset-game:hover{
+  color: #ecf0f1;
+  background-color: #d12533;
+  cursor: pointer;
+}
+
+.game-info button.reset-game:active{
+  color: #ecf0f1;
+  background-color: #9530EE;
+}
+
+.timer{
+  padding: 10px;
+  color: #ecf0f1;
+  background-color: #5882FA;
+  border: none;
+  height: 40px;
+  width: 89px;
+  align-content: center;
+  -webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 7px;
+  font-family:'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+}
+
+.btn-hide{
+  display: none;
+}
+
+/* Memory Game Board Section */
+.game-board {
+  border: 10px solid grey;
+  display: flex;
+  flex-wrap: wrap;
+  height: 550px;
+  width: 1050px;
+  padding: 17px;
+  perspective: 1000px;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.8);
+  border: 3px solid #f1f1f1;
+  transform: translate(3%, 1.5%);
+  margin: auto;
+  border-radius: 15px;
+  flex-wrap: wrap;
+}
+
+.memory-card{
+  margin:  5px;
+  position: relative;
+  width: calc(20% - 4.5vw);
+  height: calc(25% - 4.5vw);
+  border: 2px solid #ff7675;
+  border-radius: 5px;
+  background-color: #0984e3;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  display:  flex;
+  flex-wrap: wrap;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+}
+
+.memory-card:active{
+  transform: scale(.9);
+  transition: transform .3s;
+}
+
+.memory-card.flip{
+  transform: rotateY(180deg);
+}
+
+img{
+padding: 5px;
+width: 100px;
+}
+
+.front, .back{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: 3px solid #dfe6e9;
+  border-radius: 5px;
+  backface-visibility: hidden;
+  padding: 4px;
+}
+
+.front{
+  transform: rotateY(180deg);
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+  opacity: 0.75;
+  z-index: 1;
+  -webkit-animation:fadeInOverlay ease-in 1;
+  -moz-animation:fadeInOverlay ease-in 1;
+  animation:fadeInOverlay ease-in 1;
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.go-card{
+  position: absolute;
+  top: calc(50% - 17vh);
+  left: calc(50% - 20vw);
+  width: 40vw;
+  height: auto;
+  background-color: #3498db;
+  color: whitesmoke;
+  font-weight: bold;
+  font-family: Helvetica, 'sans-serif';
+  z-index: 2;
+  -webkit-animation:fadeInCard ease-in 1;
+  -moz-animation:fadeInCard ease-in 1;
+  animation:fadeInCard ease-in 1;
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.cardText{
+  position: relative;
+  text-align: center;
+}
+
+.cardText h1{
+  color: #badc58;
+  font-size: 2em;
+  margin-top: 1vh;
+}
+
+.cardText h2{
+  margin-top: 1vh;
+}
+
+.go-card button.new-game{
+  position: relative;
+
+}
+
+.hide{
+  display: none;
+}
+
+
+@media screen and (max-height: 678px){
+  .game-board{
+  }
+  .memory-card{
+    width: calc(20% - 1vw);
+    height: calc(25% - 1vw);
+    margin: 0.5vw;
+  }
+}
+
+
+.memory-card.fadeOutDown{
+  -webkit-animation-name: fadeOutDown;
+  animation-name: fadeOutDown;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+footer {
+    background-color: #222;
+    font-size: 13px;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+footer p {
+    font-weight: bold;
+    color: white;
+    margin: 5px 0;
+    font-family:'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+}
